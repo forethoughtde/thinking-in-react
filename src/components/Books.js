@@ -5,8 +5,8 @@ import BookFilter from './BookFilter';
 import BookList from '../BookList'
 
 class Books extends React.Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             books : books,
             selectedFilter : 'All',
@@ -24,18 +24,6 @@ class Books extends React.Component{
     }
 
     render(){
-        const filters = ['All', 'Design', 'Mobile', 'DevOps', 'Essentials']
-
-        const tabItems = filters.map(filter=>(
-            <li
-                className={filter === this.state.selectedFilter ? 'active' : ''}
-                key={filter}
-                onClick={()=>this.selectFilter(filter)}
-            >
-                <a href="#0">{filter}</a>
-            </li>
-        ))
-
         return (
             <section id="books">
                 <div className="container">
@@ -45,9 +33,7 @@ class Books extends React.Component{
                             <hr className="star-primary"/>
                         </div>
                     </div>
-                    {/* Book Filter */}
-                    <BookFilter tabItems={tabItems} />
-                    {/* Books List */}
+                    <BookFilter selectedFilter={this.state.selectedFilter} selectFilter={this.selectFilter} />
                     <BookList books={this.state.books} />
                 </div>
             </section>
