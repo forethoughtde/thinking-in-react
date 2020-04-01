@@ -1,6 +1,9 @@
 import React from 'react'
 import books from "../mocks/books";
 
+import BookFilter from './BookFilter';
+import BookList from '../BookList'
+
 class Books extends React.Component{
     constructor(){
         super()
@@ -43,21 +46,9 @@ class Books extends React.Component{
                         </div>
                     </div>
                     {/* Book Filter */}
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <ul className="nav nav-pills text-center">{tabItems}</ul>
-                        </div>
-                    </div>
+                    <BookFilter tabItems={tabItems} />
                     {/* Books List */}
-                    <div className="row book-list">
-                        {this.state.books.map(book=>(
-                            <div className="col-xs-6 col-sm-3" key={book.id}>
-                                <div className="thumbnail">
-                                    <img alt="" className="img-responsive" src={book.cover}/>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <BookList books={this.state.books} />
                 </div>
             </section>
         )
