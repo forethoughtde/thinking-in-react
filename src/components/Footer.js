@@ -1,4 +1,5 @@
 import React from 'react';
+import SocialLinks from './SocialLinks'
 
 const Footer = () => {
   return (
@@ -16,38 +17,7 @@ const Footer = () => {
             </div>
             <div className="footer-col col-md-4">
               <h3>Around the Web</h3>
-              <ul className="list-inline">
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/leanjscom"
-                    className="btn-social btn-outline"
-                  >
-                    <i className="fa fa-fw fa-github"/>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://twitter.com/leanjscom"
-                    className="btn-social btn-outline"
-                  >
-                    <i className="fa fa-fw fa-twitter"/>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/leanjscom/"
-                    className="btn-social btn-outline"
-                  >
-                    <i className="fa fa-fw fa-instagram"/>
-                  </a>
-                </li>
-              </ul>
+              <SocialLinks/>
             </div>
             <div className="footer-col col-md-4">
               <h3>About ReactJS Academy</h3>
