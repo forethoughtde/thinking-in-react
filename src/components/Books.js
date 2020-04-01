@@ -2,7 +2,7 @@ import React from 'react'
 import books from "../mocks/books";
 
 import BookFilter from './BookFilter';
-import BookList from '../BookList'
+import BookList from './BookList'
 
 class Books extends React.Component{
     constructor(props){
