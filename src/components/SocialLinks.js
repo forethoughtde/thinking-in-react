@@ -1,9 +1,9 @@
 import React from 'react'
 import socialLinks from '../mocks/socialLinks'
-import SocialLink from './SocialLink'
+import SocialLink from './SocialLink/SocialLink'
 
 const SocialLinks = () => {
-  const links = socialLinks.map(link => <SocialLink href={link.href} iconClass={link.iconClass} />)
+  const links = socialLinks.map(link => <SocialLink key={link.href} href={link.href} iconClass={link.iconClass} />)
 
   return (
     <ul className="list-inline">
