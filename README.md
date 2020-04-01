@@ -81,3 +81,6 @@ Try to use a Functional component if the component doesn't have state, you'll ne
 ## License
 
 This material is available for private, non-commercial use under the [GPL version 3](http://www.gnu.org/licenses/gpl-3.0-standalone.html).
+
+## Tree Diagram
+[Mindmap](https://app.mindmup.com/map/_free/2020/04/c8949c30741111ea98f7c318ca4a3ac1)
